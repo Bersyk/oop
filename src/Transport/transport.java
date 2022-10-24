@@ -1,21 +1,11 @@
 package Transport;
-
-public class transport {
-    //ПЕРЕМЕННЫЕЫ
+public abstract class transport {
     private String brand;
-
     private String model;
-
     private int productionYear;
-
     private String productionCountry;
-
     private String color;
-
     private int maxSpeed;
-
-    //КОНСТРУКТОР
-
     public transport(String brand, String model, int productionYear, String productionCountry, String color, int maxSpeed) {
         this.brand = brand;
         this.model = model;
@@ -24,48 +14,34 @@ public class transport {
         this.color = color;
         this.maxSpeed = maxSpeed;
     }
-
-
-    //МЕТОДЫ
-
+    public abstract void refill();
     public static String validOrDefault(String value, String defaultValue) {
         if (value == null || value.isBlank()) {
             return defaultValue;
         }
         return value;
     }
-
-
-    //ГЕТТЕРЫ СЕТТЕРЫ
-
     public String getBrand() {
         return brand;
     }
-
     public String getModel() {
         return model;
     }
-
     public int getProductionYear() {
         return productionYear;
     }
-
     public String getProductionCountry() {
         return productionCountry;
     }
-
     public String getColor() {
         return color;
     }
-
     public int getMaxSpeed() {
         return maxSpeed;
     }
-
     public void setColor(String color) {
         this.color = validOrDefault(color, "Белый");
     }
-
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed > 0 ? maxSpeed : 1;
     }
