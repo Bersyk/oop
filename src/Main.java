@@ -1,3 +1,6 @@
+import Driver.DriverB;
+import Driver.DriverC;
+import Driver.DriverD;
 import Transport.Bus;
 import Transport.Passenger;
 import Transport.Truck;
@@ -72,5 +75,14 @@ public class Main{
         bus1.pitStop();
         bus1.maxSpeed();
         bus1.bestLapTime();
+
+        DriverB<Passenger> driverB = new DriverB<>("Иванов Иван Иванович","B","5 месяцев");
+        System.out.println(driverB.toString(passenger1));
+
+        DriverC<Truck> driverC = new DriverC<>("Битард Семён Попаданович","C","1 год");
+        System.out.println(driverC.toString(truck1));
+
+        DriverD<Bus> driverD = new DriverD<>("Клинок Маления Микеловнка","В","6 лет");
+        System.out.println(driverD.toString(bus1));
     }
 }
