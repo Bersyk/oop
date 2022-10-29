@@ -1,5 +1,7 @@
 package Driver;
 
+import Transport.Passenger;
+
 public abstract class Driver {
     private String fullName;
     private String license;

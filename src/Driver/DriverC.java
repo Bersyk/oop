@@ -14,16 +14,16 @@ public class DriverC <T extends Truck & Competing> extends Driver{
 
     @Override
     public void startMoving() {
-
+        System.out.println("Водитель " + getFullName() + " начинает движение");
     }
 
     @Override
     public void stop() {
-
+        System.out.println("Водитель " + getFullName() + " заканчивает движение");
     }
 
     @Override
     public void refill() {
-
+        System.out.println("Водитель " + getFullName() + " заправляет автомобиль");
     }
 }
