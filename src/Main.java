@@ -1,9 +1,7 @@
 import Driver.DriverB;
 import Driver.DriverC;
 import Driver.DriverD;
-import Transport.Bus;
-import Transport.Passenger;
-import Transport.Truck;
+import Transport.*;
 
 public class Main{
     public static void main(String[] args) {
@@ -11,10 +9,10 @@ public class Main{
 //        Train leningrad = new Train("Ленинград","D-125", 2019,"Россия",null, 270, 1700, 0, "Ленинградский вокзал", "Ленинград-Пассажирский", 8);
 //        System.out.println(lastochka);
 //        System.out.println(leningrad);
-        Bus bus1 = new Bus("Газель", "А 410", 3, 1.2, 90);
-        Bus bus2 = new Bus("Икарус", "ИГ 32", 5, 1.2, 90);
-        Bus bus3 = new Bus("ПАЗ", "415",6, 1.2, 90);
-        Bus bus4 = new Bus("ПАЗ", "210",7, 1.2, 90);
+        Bus bus1 = new Bus("Газель", "А 410", 3, 1.2, 90, Weight.N1);
+        Bus bus2 = new Bus("Икарус", "ИГ 32", 5, 1.2, 90, Weight.N1);
+        Bus bus3 = new Bus("ПАЗ", "415",6, 1.2, 90, Weight.N1);
+        Bus bus4 = new Bus("ПАЗ", "210",7, 1.2, 90, Weight.N1);
         System.out.println(bus1);
         System.out.println(bus2);
         System.out.println(bus3);
@@ -30,10 +28,10 @@ public class Main{
 //        lastochka.refill();
 //        bus1.refill();
 
-        Passenger passenger1 = new Passenger("BMW", "X3", 5, 1.2, 90);
-        Passenger passenger2 = new Passenger("Audi", "A1", 8, 1.2, 90);
-        Passenger passenger3 = new Passenger("Toyota", "K210", 5, 1.2, 90);
-        Passenger passenger4 = new Passenger("Lada", "95", 9, 1.2, 90);
+        Passenger passenger1 = new Passenger("BMW", "X3", 5, 1.2, 90, TypeOfBody.SEDAN);
+        Passenger passenger2 = new Passenger("Audi", "A1", 8, 1.2, 90, TypeOfBody.SEDAN);
+        Passenger passenger3 = new Passenger("Toyota", "K210", 5, 1.2, 90, TypeOfBody.SEDAN);
+        Passenger passenger4 = new Passenger("Lada", "95", 9, 1.2, 90, TypeOfBody.SEDAN);
         System.out.println(passenger1);
         System.out.println(passenger2);
         System.out.println(passenger3);
@@ -47,10 +45,10 @@ public class Main{
         passenger3.finishMovement();
         passenger4.finishMovement();
 
-        Truck truck1 = new Truck("Truck1", "1", 5, 1.1, 50);
-        Truck truck2 = new Truck("Truck2", "2", 4, 2.2, 80);
-        Truck truck3 = new Truck("Truck3", "3", 6, 3.3, 68);
-        Truck truck4 = new Truck("Truck4", "4", 4, 1.2, 90);
+        Truck truck1 = new Truck("Truck1", "1", 5, 1.1, 50, Capacity.EXTRA_LARGE);
+        Truck truck2 = new Truck("Truck2", "2", 4, 2.2, 80, Capacity.EXTRA_LARGE);
+        Truck truck3 = new Truck("Truck3", "3", 6, 3.3, 68, Capacity.EXTRA_LARGE);
+        Truck truck4 = new Truck("Truck4", "4", 4, 1.2, 90, Capacity.EXTRA_LARGE);
         System.out.println(truck1);
         System.out.println(truck2);
         System.out.println(truck3);

@@ -1,7 +1,8 @@
 package Transport;
 
 public class Truck extends Car implements Competing {
-    public Truck(String brand, String model, int engineVolume, double bestLapTime, int maxSpeed) {
+    private Capacity capacity;
+    public Truck(String brand, String model, int engineVolume, double bestLapTime, int maxSpeed, Capacity capacity) {
         super(brand, model, engineVolume, bestLapTime, maxSpeed);
     }
 
@@ -31,5 +32,13 @@ public class Truck extends Car implements Competing {
     @Override
     public void maxSpeed() {
         System.out.println("Бренд: " + getBrand() + ". Модель: " + getModel() + ". достиг максимальной скорости в " + getMaxSpeed());
+    }
+
+    public Capacity getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(Capacity capacity) {
+        this.capacity = capacity;
     }
 }

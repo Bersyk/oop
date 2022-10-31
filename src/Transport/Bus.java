@@ -1,7 +1,8 @@
 package Transport;
 
 public class Bus extends Transport implements Competing {
-    public Bus(String brand, String model, int engineVolume, double bestLapTime, int maxSpeed) {
+    private Weight weight;
+    public Bus(String brand, String model, int engineVolume, double bestLapTime, int maxSpeed, Weight weight) {
         super(brand, model, engineVolume, bestLapTime, maxSpeed);
     }
 
@@ -39,5 +40,13 @@ public class Bus extends Transport implements Competing {
     @Override
     public void maxSpeed() {
         System.out.println("Бренд: " + getBrand() + ". Модель: " + getModel() + ". достиг максимальной скорости в " + getMaxSpeed());
+    }
+
+    public Weight getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Weight weight) {
+        this.weight = weight;
     }
 }
