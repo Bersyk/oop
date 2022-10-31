@@ -1,7 +1,8 @@
 package Transport;
 
 public class Passenger extends Car implements Competing{
-    public Passenger(String brand, String model, int engineVolume, double bestLapTime, int maxSpeed) {
+    private TypeOfBody typeofbody;
+    public Passenger(String brand, String model, int engineVolume, double bestLapTime, int maxSpeed, TypeOfBody typeofbody) {
         super(brand, model, engineVolume, bestLapTime, maxSpeed);
     }
 
@@ -32,5 +33,13 @@ public class Passenger extends Car implements Competing{
     @Override
     public void maxSpeed() {
         System.out.println("Бренд: " + getBrand() + ". Модель: " + getModel() + ". достиг максимальной скорости в " + getMaxSpeed());
+    }
+
+    public TypeOfBody getTypeofbody() {
+        return typeofbody;
+    }
+
+    public void setTypeofbody(TypeOfBody typeofbody) {
+        this.typeofbody = typeofbody;
     }
 }
